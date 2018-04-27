@@ -1,6 +1,12 @@
-# api-front
+# Ajuda AE
 
-> Front-end do projeto Ajuda AE
+> Front-end do projeto Ajuda AE, de algoritimos 3.
+
+## Tecnologias
+* Vue2
+* Vue Resource
+* Vue Router
+* Vuetify
 
 ## Build Setup
 
