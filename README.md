@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thaua97/AjudaAE-front-end.svg?branch=master)](https://travis-ci.org/thaua97/AjudaAE-front-end)
+
 # Ajuda AE
 
 > Front-end do projeto Ajuda AE, de algoritimos 3.
