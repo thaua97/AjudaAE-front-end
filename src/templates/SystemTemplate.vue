@@ -34,10 +34,10 @@
       dark
       class="appl"
     >
-    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-    <v-toolbar-title>Ajuda AE</v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-btn flat>Sair</v-btn>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-title>Ajuda AE</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn flat>Sair</v-btn>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -52,6 +52,7 @@
 
 <script>
 export default {
+  name: 'SystemTemplate',
   data () {
     return {
       drawer: null,

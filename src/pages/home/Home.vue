@@ -1,5 +1,6 @@
 <template lang="html">
-  <div>
+  <system-template>
+    <span slot="principal">
     <v-layout row wrap>
       <v-flex lg8>
         <v-layout row wrap>
@@ -86,11 +87,16 @@
 
       </v-container>
     </v-layout>
-  </div>
+    </span>
+  </system-template>
 </template>
 <script>
-
+import SystemTemplate from '@/templates/SystemTemplate'
 export default {
+  name: 'Home',
+  components: {
+    SystemTemplate
+  },
   data () {
     return {
 

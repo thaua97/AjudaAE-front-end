@@ -1,14 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Index from '@/components/index'
-import Login from '@/components/Login'
-import NotFoud from '@/components/404'
-import HomeAdmin from '@/components/Admin/Home'
-import ListUsers from '@/components/Admin/Users/ListUsers'
-import CreateUser from '@/components/Admin/Users/CreateUser'
-import ListTickets from '@/components/Tickets/ListTickets'
-import CreateTicket from '@/components/Tickets/CreateTicket'
+import Home from '@/pages/home/Home'
+import Login from '@/pages/login/Login'
+import NotFoud from '@/pages/errors/404'
+import ListTickets from '@/pages/tickets/ListTickets'
+import CreateTicket from '@/pages/tickets/CreateTicket'
 
 Vue.use(Router)
 
@@ -21,41 +17,18 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'Index',
-      component: Index,
-      redirect: '/home',
-      children: [
-        {
-          path: '/admin',
-          name: 'HomeAdmin',
-          component: HomeAdmin
-        },
-        {
-          path: '/home',
-          name: 'Home',
-          component: Home
-        },
-        {
-          path: '/usuarios',
-          name: 'ListUsers',
-          component: ListUsers
-        },
-        {
-          path: '/usuarios/novo',
-          name: 'CreateUser',
-          component: CreateUser
-        },
-        {
-          path: '/chamados',
-          name: 'ListTickets',
-          component: ListTickets
-        },
-        {
-          path: '/chamados/novo',
-          name: 'CreateTicket',
-          component: CreateTicket
-        }
-      ]
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/chamados',
+      name: 'ListTickets',
+      component: ListTickets
+    },
+    {
+      path: '/chamados/novo',
+      name: 'CreateTicket',
+      component: CreateTicket
     },
     {
       path: '/login',
