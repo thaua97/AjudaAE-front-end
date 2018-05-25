@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Admin from '@/pages/admin/Admin'
 import Home from '@/pages/home/Home'
 import Login from '@/pages/login/Login'
 import NotFoud from '@/pages/errors/404'
@@ -46,6 +47,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
     }
   ],
   mode: 'history',
