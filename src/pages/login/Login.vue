@@ -15,7 +15,7 @@ export default {
   },
   data: () => ({
     gradient: 'to top right, rgba(0,102,153, .9), rgba(0,204,153, .6)'
-  }) 
+  })
 }
 </script>
 <style lang="css">

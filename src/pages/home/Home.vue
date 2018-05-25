@@ -45,8 +45,8 @@
                     </v-flex>
                     <v-flex xs5>
                       <v-card-media
-                        src="https://randomuser.me/api/portraits/men/85.jpg"
-                        height="125px"
+                        src="https://abrilmdemulher.files.wordpress.com/2017/11/julius.jpg?quality=90&strip=info&resize=680,453"
+                        height="150px"
                         contain
                       >
                       </v-card-media>

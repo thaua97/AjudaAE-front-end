@@ -7,20 +7,20 @@
     <v-list>
       <v-toolbar
         flat
-        class="transparent"
+        color="transparent"
       >
       <v-list>
-        <v-list-tile avatar>
+        <v-list-tile avatar to="/perfil">
           <v-list-tile-avatar>
-              <img src="https://randomuser.me/api/portraits/men/85.jpg" >
-            </v-list-tile-avatar>
-            <v-list-tile-content>
-              <v-list-tile-title class="teal--text text--darken-3">John Leider</v-list-tile-title>
-            </v-list-tile-content>
+            <img src="https://abrilmdemulher.files.wordpress.com/2017/11/julius.jpg?quality=90&strip=info&resize=680,453" >
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title class="teal--text text--darken-3">John Leider</v-list-tile-title>
+          </v-list-tile-content>
         </v-list-tile>
       </v-list>
       </v-toolbar>
-      <v-list-tile v-for="item in menuItems" :key="item.title" :href="item.route">
+      <v-list-tile v-for="item in menuItems" :key="item.title" :to="item.route">
         <v-list-tile-action>
           <v-icon class="teal--text text--lighten-3">{{ item.icon }}</v-icon>
         </v-list-tile-action>
@@ -41,7 +41,7 @@
     </v-toolbar>
     <v-content>
       <v-container fluid>
-        <slot name="principal"></slot>>
+        <slot name="principal"></slot>
       </v-container>
     </v-content>
     <v-footer app dark>
@@ -49,7 +49,6 @@
     </v-footer>
   </v-app>
 </template>
-
 <script>
 export default {
   name: 'SystemTemplate',

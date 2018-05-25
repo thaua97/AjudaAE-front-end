@@ -5,6 +5,8 @@ import Login from '@/pages/login/Login'
 import NotFoud from '@/pages/errors/404'
 import ListTickets from '@/pages/tickets/ListTickets'
 import CreateTicket from '@/pages/tickets/CreateTicket'
+import Profile from '@/pages/user/profile/Profile'
+import ListUsers from '@/pages/user/listUsers/ListUsers'
 
 Vue.use(Router)
 
@@ -19,6 +21,16 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/perfil',
+      name: 'Profile',
+      component: Profile
+    },
+    {
+      path: '/usuarios',
+      name: 'ListUsers',
+      component: ListUsers
     },
     {
       path: '/chamados',

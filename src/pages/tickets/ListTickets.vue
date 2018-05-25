@@ -1,43 +1,7 @@
 <template lang="html">
-  <div>
-    <v-dialog v-model="dialog" max-width="700px">
-      <v-btn color="teal" dark outline slot="activator" class="mb-2">Novo</v-btn>
-      <v-card>
-        <v-card-title>
-          <span class="headline">{{ formTitle }}</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container grid-list-md>
-            <v-layout wrap>
-              <v-layout row>
-                <v-flex xs12 sm6 md4>
-                  <v-text-field label="Titulo" v-model="editedItem.titulo"></v-text-field>
-                </v-flex>
-                <v-flex xs12 sm6 md4>
-                  <v-text-field label="E-mail" v-model="editedItem.email"></v-text-field>
-                </v-flex>
-                <v-flex xs12 sm6 md4>
-                  <v-text-field label="Telefone" v-model="editedItem.telefone"></v-text-field>
-                </v-flex>
-              </v-layout>
-              <v-layout row>
-                <v-flex xs12 sm6 md4>
-                  <v-text-field label="Carbs (g)" v-model="editedItem.carbs"></v-text-field>
-                </v-flex>
-                <v-flex xs12 sm6 md4>
-                  <v-text-field label="Protein (g)" v-model="editedItem.protein"></v-text-field>
-                </v-flex>
-              </v-layout>
-            </v-layout>
-          </v-container>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" flat @click.native="close">Cancel</v-btn>
-          <v-btn color="blue darken-1" flat @click.native="save">Save</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+  <system-template>
+    <span slot="principal">
+      <v-btn color="teal" dark outline to="/chamados/novo" class="mb-2">Novo</v-btn>
     <v-data-table
       :headers="headers"
       :items="items"
@@ -64,11 +28,15 @@
         <v-btn color="primary" @click="initialize">Reset</v-btn>
       </template>
     </v-data-table>
-  </div>
+    </span>
+  </system-template>
 </template>
-
 <script>
+import SystemTemplate from '@/templates/SystemTemplate'
 export default {
+  components: {
+    SystemTemplate
+  },
   data: () => ({
     dialog: false,
     headers: [
